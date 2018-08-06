@@ -30,13 +30,13 @@ b5 = tf.Variable(tf.zeros([10]))
 
 # y is the output of the model
 hidden_1 = tf.nn.relu(tf.matmul(input, w1) + b1)
-hidden_1 = tf.nn.dropout(hidden_1, 0.8)
+# hidden_1 = tf.nn.dropout(hidden_1, 0.8),
 hidden_2 = tf.nn.relu(tf.matmul(hidden_1, w2) + b2)
-hidden_2 = tf.nn.dropout(hidden_2, 0.85)
+# hidden_2 = tf.nn.dropout(hidden_2, 0.85)
 hidden_3 = tf.nn.relu(tf.matmul(hidden_2, w3) + b3)
-hidden_3 = tf.nn.dropout(hidden_3, 0.9)
+# hidden_3 = tf.nn.dropout(hidden_3, 0.9)
 hidden_4 = tf.nn.relu(tf.matmul(hidden_3, w4) + b4)
-hidden_4 = tf.nn.dropout(hidden_4, 0.95)
+# hidden_4 = tf.nn.dropout(hidden_4, 0.95)
 output_layer = tf.nn.softmax(tf.matmul(hidden_4, w5) + b5)
 
 # Will be true distribution
